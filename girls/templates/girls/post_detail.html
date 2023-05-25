@@ -1,0 +1,43 @@
+{% extends 'girls/base.html'%}
+
+{% block content %}
+    <article class="post">
+        <aside class="actions">
+            {% if user.is_authenticated %}
+             <a class="btn btn-secondary" href="D">
+                {% include './icons/pencil.svg' %}
+             </a>
+            {% endif %}
+    </article>
+    <div class="post-slide">
+        <div class="post-review">
+            <h3 class="post-title">{{ post.title }}</h3>
+            <p class="post-description">
+                {{ post.text|linebreaksbr }}
+            </p>
+        </div>
+    </div>
+    <br>
+
+    {% for comment in comments %}
+    <div class="post-slide">
+        <div class="post-review">
+            <p class="post-description">
+                {{ comment.body }}
+            </p>
+        </div>
+    </div>
+    {% endfor %}
+
+    {% if new_comment %}
+    <h2>комментарий уже был добавлен</h2>
+    {% else %}
+        <h2>добавить комментарии</h2>
+        <form action="." method='POST'>
+            {{ comment_form.as_p }}
+            {% csrf_token %}
+            <p><input type="submit" value="Add comment" class = "btn-new"></p>
+        </form>
+    {% endif %}
+    
+{% endblock %}

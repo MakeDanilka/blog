@@ -1,0 +1,16 @@
+{% extends "girls/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="post-slide">
+        <div class="post-review">
+            <h5 class="post-title">
+                <fieldset class="form-group">
+                    {{ form|crispy }}
+                </fieldset>
+            </h5>
+            <div class="form-group">
+                <button class="btn-new" type="submit">Регистрация</button>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

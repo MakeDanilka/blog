@@ -1,0 +1,25 @@
+{% extends 'girls/base.html'%}
+
+{% block content %}
+    {% if articles %}
+        <ul>
+            {% for article in articles %}
+            <div class="post-slide">
+                <div class="post-review">
+                    <h5 class="post-title"><a href="{% url 'post_detail' pk=article.id %}">{{ article.title }}</a></h>
+                </div>
+            </div>
+            <br>
+            {% endfor %}
+        </ul>
+    {% else %}
+    <div class="post-slide">
+        <div class="post-review">
+            <h5 class="post-title">ничего не найдено</h>
+        </div>
+    </div>
+    {% endif %}
+
+    
+
+{% endblock %}

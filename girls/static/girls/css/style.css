@@ -1,0 +1,230 @@
+.page-header {
+    background-color: #3e6d59;
+    margin-top: 0;
+    margin-bottom: 40px;
+    padding: 20px 20px 20px 40px;
+}
+
+body {
+    background:url(back.jpg); /* Фоновый цвет и фоновый рисунок*/
+    background-repeat: no-repeat;
+
+    background-position: center center;
+    
+    background-attachment: fixed;
+    
+    -webkit-background-size: cover;
+    
+    -moz-background-size: cover;
+    
+    -o-background-size: cover;
+    
+    background-size: cover;
+
+    position: relative;
+}
+
+.page-header h1,
+.page-header h1 a,
+.page-header h1 a:visited,
+.page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Lobster', cursive;
+}
+
+.date {
+    color: #828282;
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea,
+.post-form input {
+    width: 100%;
+}
+
+.top-menu,
+.top-menu:hover,
+.top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 15pt;
+    margin-right: 20px;
+}
+
+.btn-new {
+    border-radius: 10px;
+    color: white;
+    transition: .2s linear;
+    background: #ac6141;
+    backdrop-filter: blur(100px);
+}
+
+.btn-new:active {
+    backdrop-filter: blur(10px);
+  }
+
+.btn-search{
+    border-radius: 10px;
+    color: white;
+    transition: .2s linear;
+    background: #e2e6e5;
+}
+
+.btn-new:hover {
+    box-shadow: 0 0 0 2px white, 0 0 0 4px #ac6141;
+}
+
+.post {
+    margin-bottom: 70px;
+}
+
+.post h2 a,
+.post h2 a:visited {
+    color: #000000;
+}
+
+.post > .date,
+.post > .actions {
+    float: left;
+}
+
+.btn-secondary,
+.btn-secondary:visited {
+    color: #C25100;
+    background: none;
+    border-color: #C25100;
+}
+
+.btn-secondary:hover {
+    color: #FFFFFF;
+    background-color: #C25100;
+}
+
+/* Добавленный код для перемещения темы и текста поста на левую сторону */
+h2 {
+    float: left;
+    width: 100%;
+    clear: both;
+}
+p {
+    float: left;
+    width: 100%;
+    clear: both;
+}
+.post p {
+    float: left;
+    width: 100%;
+}
+
+
+
+
+
+
+.post-slide{
+    margin: 0 15px;
+    border-bottom: 1px solid #dadada;
+    box-shadow: 0 0 5px rgba(167, 197, 167, 0.8);
+    transition: all 0.4s ease-in-out 0s;
+}
+.post-slide .post-img{
+    position: relative;
+    overflow: hidden;
+}
+.post-slide .post-img:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: all 0.4s linear 0s;
+}
+.post-slide:hover .post-img:before{
+    background: rgba(0, 0, 0, 0.6);
+}
+.post-slide .post-img img{
+    width: 100%;
+    height: auto;
+}
+.post-slide .category {
+    width: 20%;
+    font-size: 16px;
+    color: #fff;
+    line-height: 11px;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 11px 0;
+    background: #9B7DF5;
+    position: absolute;
+    bottom: 0;
+    left: -50%;
+    transition: all 0.5s ease-in-out 0s;
+}
+.post-slide:hover .category{
+    left: 0;
+}
+.post-slide .post-review{
+    padding: 25px 20px;
+    background: #fff;
+    position: relative;
+}
+.post-slide .post-title{
+    margin: 0;
+}
+.post-slide .post-title a{
+    display: inline-block;
+    font-size: 16px;
+    color: #9B7DF5;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    transition: all 0.30s linear 0s;
+}
+.post-slide .post-title a:hover{
+    text-decoration: none;
+    color: #555;
+}
+.post-slide .post-description{
+    font-size: 15px;
+    color: #555;
+    line-height: 26px;
+}
+.post-review .post-bar{
+    margin-top: 20px;
+}
+.post-bar span{
+    display: inline-block;
+    font-size: 14px;
+}
+.post-bar span i{
+    margin-right: 5px;
+    color: #999;
+}
+.post-bar span a{
+    color: #999;
+    text-transform: uppercase;
+}
+.post-bar span a:hover{
+    text-decoration: none;
+    color: #9B7DF5;
+}
+.post-bar span.comments{
+    float: right;
+}
+@media only screen and (max-width: 359px) {
+    .post-slide .category{ font-size: 13px; }
+}

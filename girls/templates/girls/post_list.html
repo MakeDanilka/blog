@@ -1,0 +1,15 @@
+{% extends 'girls/base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+    <div class="post-slide">
+        <div class="post-review">
+            <h3 class="post-title"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h3>
+            <p class="post-description">
+                {{ post.text|linebreaksbr }}
+            </p>
+        </div>
+    </div>
+    <br>
+    {% endfor %}
+{% endblock %}
